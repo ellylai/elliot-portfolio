@@ -28,8 +28,7 @@ export default function PortfolioTemplate() {
         <div>
           <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Info</h2>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/about" className="hover:text-gray-500 transition-colors">About</Link></li>
-            <li><Link href="/contact" className="hover:text-gray-500 transition-colors">Contact</Link></li>
+            <li><Link href="/about" className="hover:text-gray-500 transition-colors">About Me</Link></li>
           </ul>
         </div>
       </nav>

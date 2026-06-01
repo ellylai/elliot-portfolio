@@ -7,8 +7,8 @@ export const aboutData = {
   ],
   contact: {
     email: "hello@example.com",
-    githubUrl: "https://github.com/ellylai",
-    githubHandle: "@ellylai",
+    instaUrl: "https://www.instagram.com/elyoit.jpeg/",
+    instaHandle: "@elyoit.jpeg",
     location: "South Bay Area, CA"
   }
 };

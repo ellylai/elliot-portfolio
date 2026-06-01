@@ -59,9 +59,9 @@ export default function AboutPage() {
                   </a>
                 </li>
                 <li>
-                  <strong className="text-gray-900 mr-2">GitHub:</strong> 
-                  <a href={aboutData.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 underline decoration-gray-300 underline-offset-4 transition-colors">
-                    {aboutData.contact.githubHandle}
+                  <strong className="text-gray-900 mr-2">Instagram:</strong> 
+                  <a href={aboutData.contact.instaUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 underline decoration-gray-300 underline-offset-4 transition-colors">
+                    {aboutData.contact.instaHandle}
                   </a>
                 </li>
                 <li>

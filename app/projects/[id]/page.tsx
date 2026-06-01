@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'; // Added Image import
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { projectsData } from '@/lib/projects';
 
@@ -24,14 +24,15 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
           {project.title}
         </h1>
         
-        {/* Replaced Pink Box with Hero Image */}
-        <div className="w-full h-[50vh] md:h-[70vh] mb-12 relative bg-gray-100">
+        {/* Natural Aspect Ratio Hero Image */}
+        <div className="w-full mb-12 bg-gray-50 flex justify-center">
           <Image 
             src={project.heroImage} 
             alt={`${project.title} aerial view`} 
-            fill 
-            className="object-cover"
-            priority // Loads the hero image immediately
+            width={1600} 
+            height={1200}
+            className="w-full h-auto"
+            priority 
           />
         </div>
 
@@ -41,17 +42,26 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
           ))}
         </article>
 
-        {/* Replaced Pink Boxes with Gallery Images */}
-        <div className="space-y-10 md:space-y-16">
-          {project.galleryImages.map((imgSrc, index) => (
-            <div key={index} className="w-full h-[40vh] md:h-[60vh] relative bg-gray-100">
-               <Image 
-                  src={imgSrc} 
-                  alt={`${project.title} gallery image ${index + 1}`} 
-                  fill 
-                  className="object-cover"
-               />
-            </div>
+        {/* Natural Aspect Ratio Gallery Images */}
+        <div className="space-y-16 md:space-y-24">
+          {project.gallery.map((item, index) => (
+            <figure key={index} className="flex flex-col items-center">
+              <div className="w-full bg-gray-50 flex justify-center">
+                <Image 
+                  src={item.src} 
+                  alt={item.caption || `${project.title} gallery image ${index + 1}`} 
+                  width={1600}
+                  height={1200}
+                  className="w-full h-auto"
+                />
+              </div>
+              
+              {item.caption && (
+                <figcaption className="mt-4 text-sm text-gray-500 tracking-wide max-w-3xl text-center">
+                  {item.caption}
+                </figcaption>
+              )}
+            </figure>
           ))}
         </div>
       </main>
