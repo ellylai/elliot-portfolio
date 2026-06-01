@@ -9,7 +9,7 @@ export default function PortfolioTemplate() {
       {/* Sidebar Navigation */}
       <nav className="w-full md:w-64 p-8 border-r border-gray-200 shrink-0 z-10 bg-white">
         <Link href="/">
-          <h1 className="text-2xl font-bold mb-10 tracking-tight">Portfolio</h1>
+          <h1 className="text-2xl font-bold mb-10 tracking-tight">Elliot Lai</h1>
         </Link>
         
         <div className="mb-8">
