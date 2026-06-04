@@ -4,7 +4,7 @@ export const projectsData = [
     title: 'Project 1: Marble',
     heroImage: '/architecture/Project1_Marble/LaiElliot_4.5_FinalModel_Detail5(4).JPG',
     paragraphs: [
-            "BLANK DESCRIPTION"
+            "BLANK DESCRIPTION NEW"
         ],
     gallery: [
             { 
